@@ -4,7 +4,7 @@
 
 test_list = [1, 0b1111, 'azaza', 4.28, True, {'f': 6, 's': 19}, ('red', 'green', 'blue'), complex(5, (3 ** 0.5))]
 reference_type = ('int', 'int', 'str', 'float', 'bool', 'dict', 'tuple', 'complex')
-print('el_value ; detected_type ; reference_type ; correct')
+print('element_value ; detected_type ; reference_type ; correct')
 
 for el, ref in zip(test_list, reference_type):
     print(el, ';', type(el), ';', ref, '; ', end='')
