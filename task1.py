@@ -8,7 +8,7 @@ print('element_value ; detected_type ; reference_type ; correct')
 
 for el, ref in zip(test_list, reference_type):
     print(el, ';', type(el), ';', ref, '; ', end='')
-    if str(type(el)).count(ref) == 1:
+    if ref in str(type(el)):
         print(True)
     else:
         print(False)
