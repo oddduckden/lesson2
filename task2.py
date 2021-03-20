@@ -4,10 +4,11 @@
 
 # test string: 1,eee, r, (1, 2), azaza, {A, B, C},[2, 2, 5]
 
-source_string = input('Введите через запятую элементы списока: ')
+source_string = input('Введите через запятую элементы списка: ')
 while not source_string:
     source_string = input('Введите через запятую элементы списка: ')
 # парсинг введенной строки в список
+# не реализован парсинг комплексных чисел
 source_string = source_string.replace(' ', '')
 skip_it = False
 converted_string = str()
