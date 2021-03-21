@@ -9,9 +9,22 @@
 
 source_list = [10, 6, 5, 5, 2, 1]
 print('Исходный рейтинг: ', *source_list)
-# ввод трех дополнительных рейтингов
-while len(source_list) != 9:
-    source_list.append(int(input('Введите значение рейтинга: ')))
-    source_list.sort()
-    source_list.reverse()
-    print('Новый рейтинг :', *source_list)
+# в условии на первой итерации элемент добавили к списку, на последующих размер списка уже фиксированный,
+# предположительно с изъятием элемента, добавленного на предыдущей итерации. Похоже на добавление отзыва с
+# возможностью передумать.
+i = 0
+while True:
+    tmp = input('Введите значение рейтинга: ')
+    if tmp == 'end':
+        break
+    if i == 0:
+        source_list.append(int(tmp))
+    else:
+        source_list.pop(-1)
+        source_list.append(int(tmp))
+    i += 1
+    print('source_list: ', *source_list)
+    output_list = source_list.copy()
+    output_list.sort()
+    output_list.reverse()
+    print('Новый рейтинг :', *output_list)
