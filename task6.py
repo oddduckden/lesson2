@@ -35,7 +35,7 @@ while True:
         if product.setdefault(i) == 'end':
             stop = True
             break
-    if stop == True:
+    if stop is True:
         break
     goods.append((count, product))
     count += 1
