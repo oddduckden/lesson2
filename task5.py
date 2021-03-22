@@ -18,11 +18,9 @@ while True:
     tmp = input('Введите значение рейтинга: ')
     if tmp == 'end':
         break
-    if i == 0:
-        source_list.append(int(tmp))
-    else:
+    if i != 0:
         source_list.pop(-1)
-        source_list.append(int(tmp))
+    source_list.append(int(tmp))
     i += 1
     output_list = source_list.copy()
     output_list.sort()
