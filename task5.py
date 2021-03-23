@@ -13,17 +13,15 @@ print('Исходный рейтинг: ', *source_list)
 # предположительно с изъятием элемента, добавленного на предыдущей итерации. Похоже на добавление отзыва с
 # возможностью передумать.
 i = 0
+print('Для окончания в ответе введите "end".')
 while True:
     tmp = input('Введите значение рейтинга: ')
     if tmp == 'end':
         break
-    if i == 0:
-        source_list.append(int(tmp))
-    else:
+    if i != 0:
         source_list.pop(-1)
-        source_list.append(int(tmp))
+    source_list.append(int(tmp))
     i += 1
-    print('source_list: ', *source_list)
     output_list = source_list.copy()
     output_list.sort()
     output_list.reverse()
